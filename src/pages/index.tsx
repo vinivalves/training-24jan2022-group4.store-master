@@ -6,6 +6,8 @@ import RenderCMS from 'src/components/RenderCMS'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
 import Benefits from 'src/components/home/Benefits'
+import { Carousel } from '@faststore/ui'
+import 'src/styles/carousel.css'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -56,6 +58,28 @@ function Page(props: Props) {
       */}
       <RenderCMS sections={cmsHome?.sections} />
       <h1>{title}</h1>
+      <main>
+        <Carousel
+          controls="complete"
+          transition={{
+            duration: 400,
+            property: 'transform',
+          }}
+        >
+          <img
+            alt=""
+            height={614}
+            src="https://storecomponents.vtex.app/assets/fit-in/1280x613/center/middle/https%3A%2F%2Fstorecomponents.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F331632a0-fa52-4f08-8e45-df762d97a289___167e4c8385c3129b1a2ddab9156510ba.jpg"
+            width="100%"
+          />
+          <img
+            alt=""
+            height={614}
+            src="https://storecomponents.vtex.app/assets/fit-in/1280x613/center/middle/https%3A%2F%2Fstorecomponents.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2Fedce348c-068c-4fb9-91f2-7d235d596e0f___b2822f893b14f87337d08f07f0e520ab.jpg"
+            width="100%"
+          />
+        </Carousel>
+      </main>
       <Benefits />
     </>
   )

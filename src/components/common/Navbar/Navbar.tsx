@@ -1,4 +1,5 @@
 import React from 'react'
+import Login from 'src/components/auth/Login'
 import CartToggle from 'src/components/cart/CartToggle'
 
 import HelloBar from '../HelloBar'
@@ -11,11 +12,13 @@ function Navbar() {
     <header>
       <HelloBar />
       <BlueBar />
-      <div className="flex flex-col sm:flex-row justify-between items-center bg-primary-400">
-        <Navlinks />
-        <SearchInput />
-        <CartToggle />
-      </div>
+      <header className="flex flex-col sm:flex-row justify-between items-center bg-whitesmoke">        
+      <Navlinks />
+      <SearchInput />
+      <Login />
+      <CartToggle />
+      </header>
+
     </header>
   )
 }

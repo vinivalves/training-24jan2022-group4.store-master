@@ -18,15 +18,18 @@ function Navlinks() {
   `)
 
   return (
-    <nav aria-label="primary" className="min-h-full h-16 flex items-center">
-      <Link className="m-1 p-4" to="/">
+    <nav className="flex items-center h-16 text-sm" aria-label="primary">
+      <Link className="px-6 py-3 leading-none" to="/">
         <Logo />
       </Link>
       {links.allStoreCollection.nodes.map((x) => (
-        <Link className="m-1 p-4" key={x.slug} to={`/${x.slug}`}>
+        <Link className="mx-6 py-4" key={x.slug} to={`/${x.slug}`}>
           {x.seo.title}
         </Link>
       ))}
+      <Link className="mx-6 py-4" key="about" to="/about">
+        About
+      </Link>
     </nav>
   )
 }

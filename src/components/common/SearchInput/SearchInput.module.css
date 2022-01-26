@@ -1,11 +1,7 @@
 [data-store-input] {
-  @apply m-2 p-1
-}
-
-[data-store-button] {
-  @apply p-3
+  @apply m-2 p-1 rounded
 }
 
 [data-store-button] svg {
-  @apply w-6 h-6
+  @apply w-4 h-4
 }

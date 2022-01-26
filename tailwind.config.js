@@ -10,7 +10,14 @@ module.exports = {
       royalblue: {
         dark: '#02003d',
       },
+      gray: {
+        400: '#a8a8a8',
+      },
+      pink: {
+        700: '#f71963',
+      },
       white: colors.white,
+      whitesmoke: '#f0f0f0',
       benefitsgray: '#6b7381',
       honeydew: {
         darkest: '#AFD5AF',
